@@ -28,7 +28,7 @@
     <!--begin::Accessibility Features-->
     <!-- Skip links will be dynamically added by accessibility.js -->
     <meta name="supported-color-schemes" content="light dark" />
-    <link rel="preload" href="{{ url('themeadmin/css/adminlte.css') }}" as="style" />
+    <link rel="preload" href="{{ url('../css/adminlte.css') }}" as="style" />
     <!--end::Accessibility Features-->
 
     <!--begin::Fonts-->
@@ -110,14 +110,7 @@
             </div>
             <!--begin::Row-->
             <div class="row">
-              <div class="col-8 d-inline-flex align-items-center">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                  <label class="form-check-label" for="flexCheckDefault">
-                    I agree to the <a href="#">terms</a>
-                  </label>
-                </div>
-              </div>
+              
               <!-- /.col -->
               <div class="col-4">
                 <div class="d-grid gap-2">
@@ -156,7 +149,7 @@
       crossorigin="anonymous"
     ></script>
     <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
-    <script src="../js/adminlte.js"></script>
+    <script src="{{ url('themeadmin/js/adminlte.js') }}"></script>
     <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
     <script>
       const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
