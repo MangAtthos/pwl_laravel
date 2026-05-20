@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\BeritaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,7 +22,8 @@ Route::middleware('auth')->group(function () {
         return view('admin.index');
     })->middleware('auth');
 
-    Route::resource('kategori', KategoriController::class);
+    Route::resource('/kategori', KategoriController::class);
+    Route::resource('berita', BeritaController::class);
 });
 
 Route::post('/logout', [AuthController::class, 'logout']);
